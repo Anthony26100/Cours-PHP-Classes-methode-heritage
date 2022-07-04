@@ -1,7 +1,5 @@
-<!--Que du php dans ce dossier du coup on ne ferme pas la balise php-->
-
 <?php
-
+namespace App\Banque;
 
 /**
  * Classe correspondante à un compte bancaire /
