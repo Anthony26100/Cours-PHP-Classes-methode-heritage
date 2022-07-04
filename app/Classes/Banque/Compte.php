@@ -1,6 +1,8 @@
 <?php
 namespace App\Banque;
 
+use App\Client\Compte as CompteClient;
+
 /**
  * Classe correspondante à un compte bancaire /
  * Classe parente Compte
@@ -10,7 +12,7 @@ abstract class Compte {
   /**
    * Titulaire du compte
    *
-   * @var string
+   * @var CompteClient
    */
   protected $titulaire;
 
@@ -25,11 +27,11 @@ abstract class Compte {
   /**
    * Constructeur de la classe Compte
    *
-   * @param string $titulaire
+   * @param CompteClient $titulaire
    * @param float $solde
    */
   // C'est le constructeur de la classe ('Methode')
-  public function __construct(string $titulaire, float $solde)
+  public function __construct(CompteClient $titulaire, float $solde)
   {
     // On affect le titulaire à la propriété $titulaire
     $this->titulaire = $titulaire;
@@ -42,7 +44,7 @@ abstract class Compte {
   /**
    * Transforme l'objet en chaine de caractère
    *
-   * @return string
+   * @return CompteClient
    */
   public function __toString()
   {
@@ -80,19 +82,19 @@ abstract class Compte {
   /**
    * Recuperer le nom du titulaire
    *
-   * @return string
+   * @return CompteClient
    */
-  public function getTitulaire(): string {
+  public function getTitulaire(): CompteClient {
     return $this->titulaire;
   }
 
   /**
    * Définit le nom d'un titulaire
    *
-   * @param string $titulaire
+   * @param CompteClient $titulaire
    * @return self
    */
-  public function setTitulaire(string $titulaire): self {
+  public function setTitulaire(CompteClient $titulaire): self {
     $this->titulaire = $titulaire;
     return $this;
   }
@@ -100,7 +102,7 @@ abstract class Compte {
     /**
    * Recuperer le solde
    *
-   * @return string
+   * @return CompteClient
    */
   public function getSolde(): float {
     return $this->solde;
@@ -109,7 +111,7 @@ abstract class Compte {
   /**
    * Définit le nom d'un titulaire
    *
-   * @param string $titulaire
+   * @param CompteClient $titulaire
    * @return self
    */
   public function setSolde(float $solde): self {

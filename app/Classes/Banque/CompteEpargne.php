@@ -1,7 +1,7 @@
 <?php
 
 
-class CompteEpargne extends Compte{
+class CompteEpargne extends App\Banque\Compte{
 /**
 * Taux d'intérêt pour le compte d'épargne
 *

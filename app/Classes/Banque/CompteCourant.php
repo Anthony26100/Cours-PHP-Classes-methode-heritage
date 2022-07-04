@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Banque;
+
+use App\Client\Compte as CompteClient;
 
 class CompteCourant extends Compte{
 
@@ -15,11 +18,11 @@ class CompteCourant extends Compte{
   /**
 * Constructeur de la classe CompteCourant
 *
-* @param string $titulaire
+* @param CompteClient $titulaire
 * @param float $solde
 * @param integer $decouvert
 */
-public function __construct(string $titulaire, float $solde, int $decouvert = 250) 
+public function __construct(CompteClient $titulaire, float $solde, int $decouvert = 250) 
 {
  // On doit appeler le constructeur de la classe parente pour lui passer les propriétés de base
  parent::__construct($titulaire, $solde);
