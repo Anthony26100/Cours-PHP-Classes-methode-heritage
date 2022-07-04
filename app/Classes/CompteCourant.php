@@ -31,7 +31,7 @@ public function __construct(string $titulaire, float $solde, int $decouvert = 25
 public function retrait(float $montant)
 {
   // On verifie si le découvert permet le retrait
-  if ($this->solde - $montant > -$this->decouvert) {
+  if ($this->solde - $montant > -$this->decouvert && $montant > 0) {
     $this->solde -= $montant;
   }else{
     echo 'Solde insuffisant';

@@ -23,6 +23,18 @@ public function __construct(string $titulaire, float $solde, int $taux)
 
 
 /**
+ * Permet le versement des interets
+ *
+ * @return void
+ */
+public function verserInterests(){
+  if($this->solde > 0){
+   $this->solde = $this->solde + ($this->solde * $this->interets / 100);
+  }
+}
+
+
+/**
  * Get taux d'intérêt pour le compte d'épargne
  *
  * @return  float

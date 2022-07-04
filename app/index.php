@@ -5,7 +5,12 @@ require_once('Classes/CompteCourant.php');
 require_once('Classes/CompteEpargne.php');
 
 $compteCourant = new CompteCourant('Paul', 1000, 500);
+$compteCourant->retrait(1400);
+$compteCourant->showSolde();
+$compteCourant->retrait(1700);
+
 $compteEpargne = new CompteEpargne('Pierre', 1000, 10);
+$compteEpargne->verserInterests();
 
 // Premiere instance de la classe Compte
 // $compte = new Compte('Pomme', 10000);
