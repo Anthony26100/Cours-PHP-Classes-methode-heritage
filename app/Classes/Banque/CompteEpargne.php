@@ -1,7 +1,7 @@
 <?php
 
 
-class CompteEpargne extends App\Banque\Compte{
+class CompteEpargne extends App\Banque\Compte {
 /**
 * Taux d'intérêt pour le compte d'épargne
 *
@@ -17,7 +17,7 @@ private $interets;
 */
 public function __construct(string $titulaire, float $solde, int $taux)
 {
- parent::__construct($titulaire, $solde);
+ parent::__construct($titulaire  , $solde);
  $this->interets = $taux;
 }
 
